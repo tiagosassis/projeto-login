@@ -28,7 +28,10 @@ main{
     width: 100vw;
 }
 
-section#login{
+.flex-container{
+    display: flex;
+    flex-flow: column nowrap;
+
     overflow: hidden;
 
     background-color: white;
@@ -41,7 +44,7 @@ section#login{
     transition-timing-function: ease;
 }
 
-section#login > div#image{
+.flex-container > div#image{
     display: block;
     height: 200px;
 
@@ -50,7 +53,7 @@ section#login > div#image{
     background-size: cover;
 }
 
-section#login > div#form{
+.flex-container > div#form{
     display: block;
     padding: 10px;
 }
