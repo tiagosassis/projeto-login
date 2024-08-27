@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-/*
-    Paleta de cores
-    Verde: #49a09d
-    Roxo: #5f2c82
-*/
-
 *{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0px;
@@ -13,8 +7,14 @@
     box-sizing: border-box;
 }
 
+:root{
+    --primary-color: #5f2c82;
+    --secondary-color: #49a09d;
+    --tertiary-color: #2f6664;
+}
+
 body, html{
-    background-color: #5f2c82;
+    background-color: var(--primary-color);
     height: 100vh;
     width: 100vw;
 }
@@ -46,7 +46,7 @@ section#login > div#image{
     display: block;
     height: 200px;
 
-    background: #5f2c82 url(../images/background.jpg) no-repeat;
+    background: var(--primary-color) url(../images/background.jpg) no-repeat;
     background-position: center center;
     background-size: cover;
 }
@@ -86,7 +86,7 @@ div.campo > input{
     background-color: #67dfdb;
     font-size: 1em;
 
-    border: 2px solid #5f2c82;
+    border: 2px solid var(--primary-color);
     border-radius: 8px;
     transform: translateY(-11px);
 }
@@ -100,7 +100,7 @@ form > div.campo{
     width: 100%;
     height: 40px;
     margin: 5px 0px;
-    background-color: #5f2c82;
+    background-color: var(--primary-color);
     border-radius: 8px;
 }
 
@@ -109,14 +109,14 @@ form > input[type=submit]{
     font-size: 1em;
     width: 100%;
     height: 40px;
-    background-color: #49a09d;
+    background-color: var(--secondary-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 form > input[type=submit]:hover{
-    background-color: #2f6664;
+    background-color: var(--tertiary-color);
 }
 
 form > a.button{
@@ -127,10 +127,10 @@ form > a.button{
     font-size: 1em;
     width: 100%;
     height: 40px;
-    color: #2f6664;
+    color: var(--tertiary-color);
     background-color: white;
     border-radius: 5px;
-    border: 1px solid #2f6664;
+    border: 1px solid var(--tertiary-color);
     cursor: pointer;
     text-decoration: none;
 }
@@ -141,4 +141,8 @@ form > a.button > span{
 
 form > a.button:hover{
     background-color: #5ac5c2;
+}
+
+input{
+    outline: none;
 }
